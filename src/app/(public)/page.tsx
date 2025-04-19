@@ -1,49 +1,39 @@
-import {ProductItem} from "./components/product-item"
+import { ProductItem } from "./components/product-item";
 export default function Home() {
-  return (
-    <>
-     <div className="p-auto max-w-1/2 m-auto flex justify-between items-center mt-4">
-      <h1 className="text-3xl font-semibold text-second">Popular products</h1>
-      <div className="flex flex-wrap gap-4">
-        <span className="border rounded-4xl py-2 px-6 text-second border-second text-sm font-normal">
-          Cameras
-          </span>
-        <span className="border rounded-4xl py-2 px-6 text-second border-second text-sm font-normal">
-          Tablets
-          </span>
-        <span className="border rounded-4xl py-2 px-6 text-second border-second text-sm font-normal">
-          Laptops
-          </span>
+  const rows = [];
+  for (let index = 0; index < 9; index++) {
+    rows.push(
+      <div className="w-[300px] h-[300px] border-2 border-card rounded-[1.725rem]">
+        <ProductItem id={index} />
       </div>
-      </div>  
-      <div className="flex justify-center items-center mt-4">
-        <div className="grid grid-cols-4 gap-4">
-          <div className="w-[300px] h-[300px] bg-blue-300 rounded-[1.25rem]">
-            <ProductItem />
-          </div>
-          <div className="w-[300px] h-[300px] bg-blue-300 rounded-[1.25rem]">
-            <ProductItem />
-          </div>
-          <div className="w-[300px] h-[300px] bg-blue-300 rounded-[1.25rem]">
-            <ProductItem />
-          </div>
-          <div className="w-[300px] h-[300px] bg-blue-300 rounded-[1.25rem]">
-            <ProductItem />
-          </div>
-          <div className="w-[300px] h-[300px] bg-blue-300 rounded-[1.25rem]">
-            <ProductItem />
-          </div>
-          <div className="w-[300px] h-[300px] bg-blue-300 rounded-[1.25rem]">
-            <ProductItem />
-          </div>
-          <div className="w-[300px] h-[300px] bg-blue-300 rounded-[1.25rem]">
-            <ProductItem />
-          </div>
-          <div className="w-[300px] h-[300px] bg-blue-300 rounded-[1.25rem]">
-            <ProductItem />
-          </div>
+    );
+  }
+  return (
+    <div className="flex flex-col w-11/12 mx-auto max-w-7xl">
+      <div className="p-auto px-10 flex justify-between items-center mt-4">
+        <h1 className="text-3xl font-semibold text-second my-4">
+          Popular products
+        </h1>
+        <div className="flex flex-wrap gap-4">
+          <span className="border rounded-4xl py-2 px-6 text-second border-second text-sm font-normal">
+            Cameras
+          </span>
+          <span className="border rounded-4xl py-2 px-6 text-second border-second text-sm font-normal">
+            Tablets
+          </span>
+          <span className="border rounded-4xl py-2 px-6 text-second border-second text-sm font-normal">
+            Laptops
+          </span>
+          <span className="border rounded-4xl py-2 px-6 text-second border-second text-sm font-normal">
+            Smartphones
+          </span>
         </div>
       </div>
-    </>
-  )
+      <div className="flex justify-center items-center mt-4">
+        <div className="grid grid-cols-3 lg:grid-cols-3 md:grid-cols-3 sm:grid-cols-3 xl:grid-cols-4 gap-4">
+          {rows.map((row) => row)}
+        </div>
+      </div>
+    </div>
+  );
 }

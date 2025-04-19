@@ -1,8 +1,13 @@
 import Image from "next/image";
 import product from "@/public/joystick.png";
 import { Stars } from "./stars";
+import Link from "next/link";
 
-export function ProductItem() {
+interface ProductItemProps {
+  id: string | number;
+}
+
+export function ProductItem({ id }: ProductItemProps) {
   return (
     <div className="group flex flex-col h-full py-4 items-center justify-between">
       <Image src={product.src} alt="" width={180} height={180} />
@@ -22,9 +27,11 @@ export function ProductItem() {
           <p className="font-semibold text-md"> Add to cart </p>
           <span>icon</span>
         </button>
-        <button className="bg-button-cart text-gray-800 rounded-[1.25rem] h-[60px] min-w-[60px] p-5">
-          <span>icon</span>
-        </button>
+        <Link href={`/product/${id}`}>
+          <button className="bg-button-cart text-gray-800 rounded-[1.25rem] h-[60px] min-w-[60px] p-5">
+            <span>icon</span>
+          </button>
+        </Link>
       </div>
     </div>
   );
