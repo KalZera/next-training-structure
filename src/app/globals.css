@@ -8,6 +8,9 @@
   --background-nav: #F4F4F4;
   --first: #3A3A3A;
   --second: #1B5A7D;
+  --gray-800: #272727;
+  --button-cart:#87BCD9;
+  --card:#B6B6B6;
 }
 
 @theme {
@@ -16,6 +19,10 @@
   --color-secondary: var(--secondary);
   --color-background-nav: var(--background-nav);
   --color-first: var(--first);
+  --color-second: var(--second);
+  --color-gray-800: var(--gray-800);
+  --color-button-cart: var(--button-cart);
+  --color-card: var(--card);
 }
 
 body {

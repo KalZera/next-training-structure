@@ -1,7 +1,7 @@
 export function Navbar() {
   return (
     <nav className=" h-[71px] bg-background-nav">
-    <div className="mx-auto max-w-1/2 ">
+    <div className="mx-auto max-w-7xl">
       <div className="relative flex h-16 items-center justify-between">
         <div className="flex items-center ">
             <div className="flex space-x-4">
