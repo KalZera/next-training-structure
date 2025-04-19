@@ -2,7 +2,8 @@ import { Poppins } from 'next/font/google'
 import type { Metadata } from 'next'
 
 import './globals.css'
-import Header from './components/header'
+import { Header } from './components/header'
+import { Navbar } from './components/navbar'
 
 export const metadata: Metadata = {
   title: 'Next.js',
@@ -10,9 +11,8 @@ export const metadata: Metadata = {
 }
  
 const poppins = Poppins({
-  variable: "--font-poppins-mono",
   subsets: ["latin"],
-  weight: ["400", "500", "700"],
+  weight: ['100', "400", "500", "700"],
 });
  
 
@@ -23,8 +23,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${poppins.variable} antialiased`}>
+      <body className={`${poppins.className} antialiased`}>
         <Header />
+        <Navbar />
         {children}
       </body>
     </html>
