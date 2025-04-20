@@ -1,5 +1,5 @@
-import Image from "next/image"
-import star from "@/public/star.svg"
+import Image from "next/image";
+import star from "@/public/star.svg";
 
 export function Stars() {
   return (
@@ -10,5 +10,5 @@ export function Stars() {
       <Image src={star.src} alt="" width={15} height={15} />
       <Image src={star.src} alt="" width={15} height={15} />
     </div>
-  )
+  );
 }
