@@ -4,7 +4,16 @@ import joystick from "@/public/joystick.png";
 import likeIcon from "@/public/like-icon-product.svg";
 import { Stars } from "../../components/stars";
 import { Counter } from "./components/counter";
+import { ProductItem } from "../../components/product-item";
 export default function Product() {
+  const rows = [];
+  for (let index = 0; index < 4; index++) {
+    rows.push(
+      <div className="w-[300px] h-[300px] border-2 border-card rounded-[1.725rem]">
+        <ProductItem id={index} />
+      </div>
+    );
+  }
   return (
     <div className="flex flex-col w-11/12 mx-auto max-w-7xl">
       <div className="p-3">
@@ -110,14 +119,27 @@ export default function Product() {
             <p className="text-lg text-gray-3 font-medium">Share:</p>
           </div>
         </div>
-        <p> series number</p>
       </div>
-      <div className="flex gap-3">
-        <p>product description</p>
-        <p>product review</p>
+      <div className="flex flex-col gap-3 mt-3">
+        <div className="flex gap-4 justify-center items-center my-6">
+          <button className="border-2 border-gray-5 py-3.5 px-8.5 rounded-r-default">
+            <p className="text-xl font-medium text-gray-6">Description</p>
+          </button>
+          <button className="border-2 border-primary bg-primary py-3.5 px-8.5 rounded-r-default">
+            <p className="text-xl font-medium text-white">Reviews</p>
+          </button>
+        </div>
+        <div className="p-12 border-2 border-card rounded-r-default">
+          <p className="text-xl text-primary font-semibold">Customer reviews</p>
+          <p className="text-lg text-gray-1 py-4">No reviews yet</p>
+          <button className="px-6 py-2 bg-primary">
+            <p className="text-lg text-white underline">Write a review</p>
+          </button>
+        </div>
       </div>
       <div className="p-3">
-        <p>other products</p>
+        <p className="text-2xl text-primary font-semibold">Related Products</p>
+        <div className="grid grid-cols-4 gap-3">{rows.map((row) => row)}</div>
       </div>
     </div>
   );
