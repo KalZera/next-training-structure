@@ -3,7 +3,7 @@ import product from "@/public/joystick-product.png";
 import joystick from "@/public/joystick.png";
 import likeIcon from "@/public/like-icon-product.svg";
 import { Stars } from "../../components/stars";
-import { Counter } from "./components/counter";
+import { Counter } from "../../components/counter";
 import { ProductItem } from "../../components/product-item";
 export default function Product() {
   const rows = [];
