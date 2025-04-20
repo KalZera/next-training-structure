@@ -1,5 +1,6 @@
 import Image from "next/image";
 import product from "@/public/joystick-product.png";
+import joystick from "@/public/joystick.png";
 import likeIcon from "@/public/like-icon-product.svg";
 import { Stars } from "../../components/stars";
 import { Counter } from "./components/counter";
@@ -19,7 +20,7 @@ export default function Product() {
             alt=""
           />
         </div>
-        <div className="flex flex-col gap-4">
+        <div className="flex flex-col gap-4 justify-around">
           <p className="text-3xl font-medium text-primary">Play Game</p>
           <p className="text-3xl font-medium text-gray-1 py-4">$ 11,90</p>
           <div className="flex">
@@ -27,7 +28,7 @@ export default function Product() {
             <p className="text-sm font-normal text-gray-1 p-3">No reviews</p>
           </div>
           <div className="flex">
-            <p className="text-lg font-medium text-gray-800">Avaibility</p>
+            <p className="text-lg font-medium text-gray-800 pr-2">Avaibility</p>
             <p className="text-lg font-medium text-gray-800"> In Stock</p>
           </div>
           <p className="text-sm font-normal text-gray-800">
@@ -64,16 +65,52 @@ export default function Product() {
           </div>
           <div className="flex gap-3">
             <button className="bg-secondary p-4 rounded-4xl px-8">
-              <p className="text-lg font-bold text-white"> Add to Cart</p>
+              <p className="text-lg font-semibold text-white"> Add to Cart</p>
             </button>
             <button className="bg-secondary p-4 rounded-4xl px-8">
-              <p className="text-lg font-bold text-white"> Buy it now</p>
+              <p className="text-lg font-semibold text-white"> Buy it now</p>
             </button>
             <button className="bg-red-200 min-h-16 min-w-16 flex items-center justify-center rounded-full">
               <Image src={likeIcon.src} width={36} height={36} alt="" />
             </button>
           </div>
         </div>
+      </div>
+      <div className="grid grid-cols-2 p-3 mb-2 gap-3">
+        <div className="flex gap-3 justify-center max-h-36">
+          <Image
+            src={joystick.src}
+            alt=""
+            height={100}
+            width={250}
+            className="object-cover"
+          />
+          <Image
+            src={joystick.src}
+            alt=""
+            height={100}
+            width={250}
+            className="object-cover"
+          />
+        </div>
+        <div className="flex flex-col gap-3 justify-around">
+          <div className="flex gap-1">
+            <p className="text-lg text-gray-3 font-medium">Sku:</p>
+            <span className="px-3 text-lg text-gray-3 font-medium">
+              01133-9-9
+            </span>
+          </div>
+          <div className="flex gap-1">
+            <p className="text-lg text-gray-3 font-medium">Categories:</p>
+            <span className="px-3 text-sm text-gray-3">
+              20% off, 49% off Alex remote
+            </span>
+          </div>
+          <div className="flex gap-1">
+            <p className="text-lg text-gray-3 font-medium">Share:</p>
+          </div>
+        </div>
+        <p> series number</p>
       </div>
       <div className="flex gap-3">
         <p>product description</p>
