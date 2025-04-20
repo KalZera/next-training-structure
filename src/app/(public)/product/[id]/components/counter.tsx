@@ -4,7 +4,6 @@ import { useState } from "react";
 
 export function Counter() {
   const [counter, setCounter] = useState(0);
-  console.log({ counter });
   return (
     <>
       <button
