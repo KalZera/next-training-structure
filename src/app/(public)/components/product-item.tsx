@@ -28,7 +28,7 @@ export function ProductItem({ id }: ProductItemProps) {
           <span>icon</span>
         </button>
         <Link href={`/product/${id}`}>
-          <button className="bg-button-cart text-gray-800 rounded-[1.25rem] h-[60px] min-w-[60px] p-5">
+          <button className="bg-button-cart text-gray-800 rounded-r-default h-[60px] min-w-[60px] p-5">
             <span>icon</span>
           </button>
         </Link>
