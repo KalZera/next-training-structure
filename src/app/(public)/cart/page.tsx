@@ -6,7 +6,7 @@ export default function Cart() {
       <div className="p-3">
         <p>bread crumbs</p>
       </div>
-      <div className="grid grid-cols-[1fr_30%] p-3 mb-2 gap-3">
+      <div className="grid grid-cols-[872px_426px] p-3 mb-2 gap-3">
         <div className="flex flex-col">
           <div className="flex-1">
             <p>TODO LIST</p>
