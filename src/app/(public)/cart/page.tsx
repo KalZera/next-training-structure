@@ -6,11 +6,25 @@ export default function Cart() {
       <div className="p-3">
         <p>bread crumbs</p>
       </div>
-      <div className="grid grid-cols-[872px_426px] p-3 mb-2 gap-3">
+      <div className="grid grid-cols-[870px_426px] p-3 mb-2 gap-5">
         <div className="flex flex-col">
           <div className="flex-1">
-            <p>TODO LIST</p>
+            <div className="bg-table-header flex py-3">
+              <p className="text-xl font-medium pl-8 text-gray-800 w-[40%]">
+                Product
+              </p>
+              <p className="text-xl font-medium text-gray-800 w-[20%]">Price</p>
+              <p className="text-xl font-medium text-gray-800 w-[20%]">
+                Quantity
+              </p>
+              <p className="text-xl font-medium text-gray-800 w-[20%]">
+                Subtotal
+              </p>
+            </div>
             <ItemList />
+            <hr className="text-card" />
+            <ItemList />
+            <hr className="text-card" />
           </div>
           <div className="flex gap-6">
             <button className=" w-full bg-secondary py-3.5 px-8.5 rounded-r-default">
@@ -18,25 +32,25 @@ export default function Cart() {
                 Continue shopping
               </p>
             </button>
-            <button className=" w-full border-2 border-disabled py-3.5 px-8.5 rounded-r-default">
+            <button className=" w-full border-1 border-disabled py-3.5 px-8.5 rounded-r-default">
               <p className="text-xl font-semibold text-disabled">Update cart</p>
             </button>
-            <button className=" w-full border-2 border-clear py-3.5 px-8.5 rounded-r-default">
+            <button className=" w-full border-1 border-clear py-3.5 px-8.5 rounded-r-default">
               <p className="text-xl font-semibold text-clear">Clear cart</p>
             </button>
           </div>
         </div>
-        <div className="flex flex-col gap-4 justify-around border-2 border-card ">
+        <div className="flex flex-col gap-4 justify-around border-1 border-card ">
           <div className="bg-table-header py-2">
             <p className="text-center text-xl font-medium">Cart total</p>
           </div>
-          <div className="px-3 py-4">
-            <div className="flex justify-between py-4">
+          <div className="px-9 py-5">
+            <div className="flex justify-between pb-7">
               <p className="text-center text-xl font-medium">Subtotal</p>
               <p className="text-center text-xl font-medium">$ 23.20</p>
             </div>
-            <div className="py-8 border-y-2 border-card">
-              <div className="flex border-2 border-card rounded-r-default">
+            <div className="py-7 border-y-2 border-card">
+              <div className="flex border-1 border-card rounded-r-default">
                 <input
                   type="text"
                   placeholder="Enter coupon code"
@@ -47,16 +61,16 @@ export default function Cart() {
                 </button>
               </div>
             </div>
-            <div className="py-8 border-b-2 border-card mb-4">
-              <select className="py-4 px-3 border-2 border-card rounded-r-default w-full bg-white text-gray-1">
+            <div className="pt-7 ">
+              <select className="py-4 px-3 border-1 border-card rounded-r-default w-full bg-white text-gray-1">
                 <option>County</option>
               </select>
             </div>
-            <div className="flex justify-between mb-7">
+            <div className="flex justify-between py-7">
               <p className="text-lg">Total amount</p>
               <p className="text-lg">$ 23.20</p>
             </div>
-            <div className="flex justify-between py-3">
+            <div className="flex justify-between pb-3">
               <button className="w-full bg-secondary rounded-4xl py-3.5">
                 <p className="text-white font-semibold">Proceed to Checkout</p>
               </button>
@@ -65,7 +79,7 @@ export default function Cart() {
         </div>
       </div>
       <div className="flex flex-col gap-3 mt-3">
-        <div className="p-12 border-2 border-card rounded-r-default">
+        <div className="p-12 border-1 border-card rounded-r-default">
           <p className="text-xl text-primary font-semibold">Customer reviews</p>
           <p className="text-lg text-gray-1 py-4">No reviews yet</p>
           <button className="px-6 py-2 bg-primary">
