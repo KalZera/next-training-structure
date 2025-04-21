@@ -3,7 +3,7 @@ export default function Home() {
   const rows = [];
   for (let index = 0; index < 9; index++) {
     rows.push(
-      <div className="w-[300px] h-[300px] border-2 border-card rounded-[1.725rem]">
+      <div className="w-[300px] h-[300px] border-1 border-card rounded-[1.725rem]">
         <ProductItem id={index} />
       </div>
     );

@@ -9,7 +9,7 @@ export default function Product() {
   const rows = [];
   for (let index = 0; index < 4; index++) {
     rows.push(
-      <div className="w-[300px] h-[300px] border-2 border-card rounded-[1.725rem]">
+      <div className="w-[300px] h-[300px] border-1 border-card rounded-[1.725rem]">
         <ProductItem id={index} />
       </div>
     );
@@ -55,7 +55,7 @@ export default function Product() {
           <div className="flex gap-3">
             <p className="text-lg font-medium"> Size: </p>
             {/* <input type="checkbox" className="hidden" name="size"/> */}
-            <button className="px-3 bg-gray-2 border-gray-3 border-2">
+            <button className="px-3 bg-gray-2 border-gray-3 border-1">
               <p className="text-lg px-2 text-gray-3">30</p>
             </button>
             <button className="px-3 bg-gray-2">
@@ -122,14 +122,14 @@ export default function Product() {
       </div>
       <div className="flex flex-col gap-3 mt-3">
         <div className="flex gap-4 justify-center items-center my-6">
-          <button className="border-2 border-gray-5 py-3.5 px-8.5 rounded-r-default">
+          <button className="border-1 border-gray-5 py-3.5 px-8.5 rounded-r-default">
             <p className="text-xl font-medium text-gray-6">Description</p>
           </button>
-          <button className="border-2 border-primary bg-primary py-3.5 px-8.5 rounded-r-default">
+          <button className="border-1 border-primary bg-primary py-3.5 px-8.5 rounded-r-default">
             <p className="text-xl font-medium text-white">Reviews</p>
           </button>
         </div>
-        <div className="p-12 border-2 border-card rounded-r-default">
+        <div className="p-12 border-1 border-card rounded-r-default">
           <p className="text-xl text-primary font-semibold">Customer reviews</p>
           <p className="text-lg text-gray-1 py-4">No reviews yet</p>
           <button className="px-6 py-2 bg-primary">
