@@ -9,7 +9,7 @@ export default function Home() {
     );
   }
   return (
-    <div className="flex flex-col mx-auto w-[90%">
+    <div className="flex flex-col mx-auto w-[90%]">
       <div className="p-auto flex justify-between items-center mt-4">
         <h1 className="text-3xl font-semibold text-second my-4">
           Popular products
