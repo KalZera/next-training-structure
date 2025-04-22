@@ -15,12 +15,12 @@ export default function Product() {
     );
   }
   return (
-    <div className="flex flex-col w-11/12 mx-auto max-w-7xl">
+    <div className="flex flex-col w-[90%] mx-auto">
       <div className="p-3">
         <p>bread crumbs</p>
       </div>
       <div className="grid grid-cols-2 p-3 mb-2 gap-3">
-        <div className="border border-card rounded-[1.25rem]">
+        <div className="border border-card rounded-[1.25rem] flex justify-center">
           <Image
             src={product.src}
             width={650}
@@ -86,7 +86,7 @@ export default function Product() {
         </div>
       </div>
       <div className="grid grid-cols-2 p-3 mb-2 gap-3">
-        <div className="flex gap-3 justify-center max-h-36">
+        <div className="flex gap-3 max-h-36">
           <Image
             src={joystick.src}
             alt=""
@@ -139,7 +139,9 @@ export default function Product() {
       </div>
       <div className="p-3">
         <p className="text-2xl text-primary font-semibold">Related Products</p>
-        <div className="grid grid-cols-4 gap-3">{rows.map((row) => row)}</div>
+        <div className="grid lg:grid-cols-3 md:grid-cols-3 sm:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 gap-4">
+          {rows.map((row) => row)}
+        </div>
       </div>
     </div>
   );

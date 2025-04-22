@@ -2,11 +2,11 @@ import { ItemList } from "./components/item-list";
 
 export default function Cart() {
   return (
-    <div className="flex flex-col w-11/12 mx-auto max-w-7xl">
+    <div className="flex flex-col w-[90%] mx-auto">
       <div className="p-3">
         <p>bread crumbs</p>
       </div>
-      <div className="grid grid-cols-[870px_426px] p-3 mb-2 gap-5">
+      <div className="grid grid-cols-[1fr_426px] p-3 mb-2 gap-5">
         <div className="flex flex-col">
           <div className="flex-1">
             <div className="bg-table-header flex py-3">

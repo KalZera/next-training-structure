@@ -21,8 +21,8 @@ export function ItemList() {
       <div className="flex items-center w-[20%]">
         <Counter />
       </div>
-      <div className="flex items-center w-[20%]">
-        <p className="text-[22px] font-medium pr-[72px]">$ 11,70</p>
+      <div className="flex items-center justify-between pr-2 w-[20%]">
+        <p className="text-[22px] font-medium">$ 11,70</p>
         <Image src={closeIcon.src} alt="" height={24} width={24} />
       </div>
     </div>

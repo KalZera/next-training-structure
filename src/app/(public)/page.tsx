@@ -9,8 +9,8 @@ export default function Home() {
     );
   }
   return (
-    <div className="flex flex-col w-11/12 mx-auto max-w-7xl">
-      <div className="p-auto px-10 flex justify-between items-center mt-4">
+    <div className="flex flex-col mx-auto w-[90%">
+      <div className="p-auto flex justify-between items-center mt-4">
         <h1 className="text-3xl font-semibold text-second my-4">
           Popular products
         </h1>
@@ -29,10 +29,8 @@ export default function Home() {
           </span>
         </div>
       </div>
-      <div className="flex justify-center items-center mt-4">
-        <div className="grid grid-cols-3 lg:grid-cols-3 md:grid-cols-3 sm:grid-cols-3 xl:grid-cols-4 gap-4">
-          {rows.map((row) => row)}
-        </div>
+      <div className="grid lg:grid-cols-3 md:grid-cols-3 sm:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 gap-4">
+        {rows.map((row) => row)}
       </div>
     </div>
   );
