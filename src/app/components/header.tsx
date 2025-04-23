@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import logo from "../../public/logo.svg";
 import userIcon from "../../public/user-icon.svg";
 import likeIcon from "../../public/like-icon.svg";
@@ -38,10 +39,12 @@ export function Header() {
                 <Image src={likeIcon.src} alt="Logo" width={24} height={24} />
                 <p className="text-sm font-normal">Favorites</p>
               </button>
-              <button className="flex gap-2 text-white px-4 py-2 rounded h-full">
-                <Image src={cartIcon.src} alt="Logo" width={24} height={24} />
-                <p className="text-sm font-normal">Cart</p>
-              </button>
+              <Link href="/cart">
+                <button className="flex gap-2 text-white px-4 py-2 rounded h-full cursor-pointer">
+                  <Image src={cartIcon.src} alt="Logo" width={24} height={24} />
+                  <p className="text-sm font-normal">Cart</p>
+                </button>
+              </Link>
             </div>
           </div>
         </div>

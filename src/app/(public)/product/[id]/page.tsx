@@ -8,11 +8,7 @@ import { ProductItem } from "../../components/product-item";
 export default function Product() {
   const rows = [];
   for (let index = 0; index < 4; index++) {
-    rows.push(
-      <div className="w-[300px] h-[300px] border-1 border-card rounded-[1.725rem]">
-        <ProductItem id={index} />
-      </div>
-    );
+    rows.push(<ProductItem id={index} />);
   }
   return (
     <div className="flex flex-col w-[90%] mx-auto">

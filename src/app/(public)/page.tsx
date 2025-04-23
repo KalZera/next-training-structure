@@ -2,11 +2,7 @@ import { ProductItem } from "./components/product-item";
 export default function Home() {
   const rows = [];
   for (let index = 0; index < 9; index++) {
-    rows.push(
-      <div className="w-[308px] h-[313px] border-1 border-card rounded-[1.725rem]">
-        <ProductItem id={index} />
-      </div>
-    );
+    rows.push(<ProductItem id={index} />);
   }
   return (
     <div className="flex flex-col mx-auto w-[90%]">
