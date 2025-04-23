@@ -3,7 +3,7 @@ export default function Home() {
   const rows = [];
   for (let index = 0; index < 9; index++) {
     rows.push(
-      <div className="w-[300px] h-[300px] border-1 border-card rounded-[1.725rem]">
+      <div className="w-[308px] h-[313px] border-1 border-card rounded-[1.725rem]">
         <ProductItem id={index} />
       </div>
     );
@@ -29,7 +29,7 @@ export default function Home() {
           </span>
         </div>
       </div>
-      <div className="grid lg:grid-cols-3 md:grid-cols-3 sm:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 gap-4">
+      <div className="grid lg:grid-cols-3 md:grid-cols-3 sm:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 gap-6.5">
         {rows.map((row) => row)}
       </div>
     </div>

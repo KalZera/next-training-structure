@@ -10,6 +10,7 @@
   --second: #1B5A7D;
   --gray-800: #272727;
   --button-cart:#87BCD9;
+  --button-1:#B3D4E5;
   --table-header: #E2F4FF;
   --card:#B6B6B6;
   --gray-1: #4a4a4a;
@@ -31,6 +32,7 @@
   --color-second: var(--second);
   --color-gray-800: var(--gray-800);
   --color-button-cart: var(--button-cart);
+  --color-button-1: var(--button-1);
   --color-table-header: var(--table-header);
   --color-card: var(--card);
   --color-gray-1: var(--gray-1);
