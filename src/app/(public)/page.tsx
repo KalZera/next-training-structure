@@ -1,9 +1,6 @@
 import { ProductItem } from "./components/product-item";
+import { mock } from "./mock";
 export default function Home() {
-  const rows = [];
-  for (let index = 0; index < 9; index++) {
-    rows.push(<ProductItem id={index} />);
-  }
   return (
     <div className="flex flex-col mx-auto w-[90%]">
       <div className="p-auto flex justify-between items-center mt-4">
@@ -26,7 +23,9 @@ export default function Home() {
         </div>
       </div>
       <div className="grid lg:grid-cols-3 md:grid-cols-3 sm:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 gap-6.5">
-        {rows.map((row) => row)}
+        {mock.map((item) => (
+          <ProductItem key={item.id} {...item} />
+        ))}
       </div>
     </div>
   );
