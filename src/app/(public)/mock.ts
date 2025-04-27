@@ -104,7 +104,7 @@ export const mock = [
   {
     id: 7,
     name: "laptop",
-    price: 23.9,
+    price: 2399.9,
     image: laptop,
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
@@ -152,3 +152,35 @@ export const mock = [
 ];
 
 export const mockLike = [1,2,4,7]
+
+export const mockCart = [
+  {
+    id: 1,
+    name: "Play Game",
+    color: "green",
+    size: 38,
+    quantity: 3,
+    price: 11.9,
+    image:joystick,
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    sku: "01133-9-9",
+    categories: ["20% off", "49% off Alex remote"],
+    availability: "In Stock",
+    reviews: 0,
+  },{
+    id: 7,
+    color:"blue",
+    size: 42,
+    quantity: 1,
+    name: "laptop",
+    price: 2399.9,
+    image: joystickYellow,
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    sku: "01133-9-9",
+    categories: ["20% off", "49% off Alex remote"],
+    availability: "In Stock",
+    reviews: 0,
+  },
+];
