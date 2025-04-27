@@ -3,7 +3,10 @@ import { ItemList } from "./components/item-list";
 
 export default function Cart() {
   const cartItems = mockCart;
-
+  const totalPrice = cartItems.reduce(
+    (acc, item) => acc + item.price * item.quantity,
+    0
+  );
   return (
     <div className="flex flex-col w-[90%] mx-auto">
       <div className="p-3">
@@ -28,7 +31,6 @@ export default function Cart() {
               <ItemList
                 key={item.id}
                 color={item.color}
-                id={item.id}
                 image={item.image}
                 name={item.name}
                 quantity={item.quantity}
@@ -58,7 +60,12 @@ export default function Cart() {
           <div className="px-9 py-5">
             <div className="flex justify-between pb-7">
               <p className="text-center text-xl font-medium">Subtotal</p>
-              <p className="text-center text-xl font-medium">$ 23.20</p>
+              <p className="text-center text-xl font-medium">
+                {Intl.NumberFormat("en-us", {
+                  style: "currency",
+                  currency: "USD",
+                }).format(totalPrice)}
+              </p>
             </div>
             <div className="py-7 border-y-2 border-card">
               <div className="flex border-1 border-card rounded-r-default">

@@ -4,7 +4,6 @@ import { Counter } from "../../components/counter";
 import closeIcon from "@/public/close-icon.svg";
 
 interface ItemListProps {
-  id: string | number;
   name: string;
   price: number;
   image: StaticImageData;
@@ -30,7 +29,7 @@ export function ItemList(props: ItemListProps) {
           <p className="text-[22px] font-medium">$ 11,70</p>
         </div>
         <div className="flex items-center w-[20%]">
-          <Counter />
+          <Counter initialValue={quantity} />
         </div>
         <div className="flex items-center justify-between pr-2 w-[20%]">
           <p className="text-[22px] font-medium">
