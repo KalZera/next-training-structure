@@ -7,7 +7,8 @@ export default function Home() {
         <h1 className="text-3xl font-semibold text-second my-4">
           Popular products
         </h1>
-        <div className="flex flex-wrap gap-4">
+        {/* remove tags to button filter categories */}
+        {/* <div className="flex flex-wrap gap-4">
           <span className="border rounded-4xl py-2 px-6 text-second border-second text-sm font-normal">
             Cameras
           </span>
@@ -20,7 +21,7 @@ export default function Home() {
           <span className="border rounded-4xl py-2 px-6 text-second border-second text-sm font-normal">
             Smartphones
           </span>
-        </div>
+        </div> */}
       </div>
       <div className="grid lg:grid-cols-3 md:grid-cols-3 sm:grid-cols-3 xl:grid-cols-4 gap-6.5">
         {mock.map((item) => (

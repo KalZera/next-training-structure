@@ -1,14 +1,16 @@
-import Image, { StaticImageData } from "next/image";
+import Image from "next/image";
 
 import { LikeButton } from "./like-button";
 import { GroupProductButtons } from "./products/group-product-buttons";
 import { InfoProducts } from "./products/info-product";
 import { Product } from "@/app/types/products";
+import { mockLike } from "../mock";
 
 type ProductItemProps = Product;
 
 export function ProductItem(props: ProductItemProps) {
-  const isEven = Number(props.id) % 2 === 0;
+  const productsFavorited = mockLike;
+  const isFavorited = productsFavorited.includes(props.id);
   return (
     <div className="w-[308px] h-[313px] border-1 border-card rounded-[1.725rem]">
       <div className="group flex flex-col h-full py-5.5 px-3.5 items-center justify-between">
@@ -20,7 +22,7 @@ export function ProductItem(props: ProductItemProps) {
             height={168}
             className="object-contain max-h-[168px] max-w-[282px]"
           />
-          <LikeButton liked={isEven} />
+          <LikeButton liked={isFavorited} />
         </div>
         <div className="flex flex-col w-full px-2 transition-all duration-300 ease-in-out opacity-100 group-hover:opacity-0 group-hover:translate-y-[110px]">
           <InfoProducts

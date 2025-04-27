@@ -151,7 +151,7 @@ export const mock = [
   },
 ];
 
-export const mockLike = [1,2,4,7]
+export const mockLike:Array<string|number> = [1,2,4,7]
 
 export const mockCart = [
   {

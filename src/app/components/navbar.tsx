@@ -13,7 +13,8 @@ export function Navbar() {
               >
                 Home
               </Link>
-              <a href="#" className="rounded-md px-3 py-2 text-md text-first ">
+              {/* coment while doesnt have a page */}
+              {/* <a href="#" className="rounded-md px-3 py-2 text-md text-first ">
                 Catalog
               </a>
               <a href="#" className="rounded-md px-3 py-2 text-md text-first ">
@@ -21,7 +22,7 @@ export function Navbar() {
               </a>
               <a href="#" className="rounded-md px-3 py-2 text-md text-first ">
                 About Us
-              </a>
+              </a> */}
             </div>
           </div>
         </div>
