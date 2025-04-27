@@ -22,7 +22,7 @@ export default function Home() {
           </span>
         </div>
       </div>
-      <div className="grid lg:grid-cols-3 md:grid-cols-3 sm:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 gap-6.5">
+      <div className="grid lg:grid-cols-3 md:grid-cols-3 sm:grid-cols-3 xl:grid-cols-4 gap-6.5">
         {mock.map((item) => (
           <ProductItem key={item.id} {...item} />
         ))}

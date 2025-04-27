@@ -86,7 +86,12 @@ export default function Cart() {
             </div>
             <div className="flex justify-between py-7">
               <p className="text-lg">Total amount</p>
-              <p className="text-lg">$ 23.20</p>
+              <p className="text-lg">
+                {Intl.NumberFormat("en-us", {
+                  style: "currency",
+                  currency: "USD",
+                }).format(totalPrice)}
+              </p>
             </div>
             <div className="flex justify-between pb-3">
               <button className="w-full bg-secondary rounded-4xl py-3.5">

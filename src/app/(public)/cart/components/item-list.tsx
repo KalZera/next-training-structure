@@ -26,7 +26,12 @@ export function ItemList(props: ItemListProps) {
           </div>
         </div>
         <div className="flex items-center w-[20%]">
-          <p className="text-[22px] font-medium">$ 11,70</p>
+          <p className="text-[22px] font-medium">
+            {Intl.NumberFormat("en-us", {
+              style: "currency",
+              currency: "USD",
+            }).format(price)}
+          </p>
         </div>
         <div className="flex items-center w-[20%]">
           <Counter initialValue={quantity} />
