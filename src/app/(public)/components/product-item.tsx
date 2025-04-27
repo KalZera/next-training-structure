@@ -3,22 +3,9 @@ import Image, { StaticImageData } from "next/image";
 import { LikeButton } from "./like-button";
 import { GroupProductButtons } from "./products/group-product-buttons";
 import { InfoProducts } from "./products/info-product";
+import { Product } from "@/app/types/products";
 
-interface ProductItemProps {
-  id: string | number;
-  name: string;
-  price: number;
-  image: StaticImageData;
-  description: string;
-  sku: string;
-  categories: string[];
-  availability: string;
-  reviews: number;
-  colors: string[];
-  sizes: number[];
-  quantity: number;
-  stars: number;
-}
+type ProductItemProps = Product;
 
 export function ProductItem(props: ProductItemProps) {
   const isEven = Number(props.id) % 2 === 0;

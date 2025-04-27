@@ -1,6 +1,9 @@
+import { mockCart } from "../mock";
 import { ItemList } from "./components/item-list";
 
 export default function Cart() {
+  const cartItems = mockCart;
+
   return (
     <div className="flex flex-col w-[90%] mx-auto">
       <div className="p-3">
@@ -21,10 +24,18 @@ export default function Cart() {
                 Subtotal
               </p>
             </div>
-            <ItemList />
-            <hr className="text-card" />
-            <ItemList />
-            <hr className="text-card" />
+            {cartItems.map((item) => (
+              <ItemList
+                key={item.id}
+                color={item.color}
+                id={item.id}
+                image={item.image}
+                name={item.name}
+                quantity={item.quantity}
+                price={item.price}
+                size={item.size}
+              />
+            ))}
           </div>
           <div className="flex gap-6">
             <button className=" w-full bg-secondary py-3.5 px-8.5 rounded-r-default">

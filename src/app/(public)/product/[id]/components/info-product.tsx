@@ -2,6 +2,7 @@ import Image from "next/image";
 import likeIcon from "@/public/like-icon-product.svg";
 import { Stars } from "../../../components/stars";
 import { Counter } from "../../../components/counter";
+import Link from "next/link";
 interface InfoProductProps {
   id: number | string;
   name: string;
@@ -63,9 +64,11 @@ export function InfoProduct(props: InfoProductProps) {
         <Counter />
       </div>
       <div className="flex gap-3">
-        <button className="bg-secondary p-4 rounded-4xl px-8">
-          <p className="text-lg font-semibold text-white"> Add to Cart</p>
-        </button>
+        <Link href="/cart">
+          <button className="bg-secondary p-4 rounded-4xl px-8">
+            <p className="text-lg font-semibold text-white"> Add to Cart</p>
+          </button>
+        </Link>
         <button className="bg-secondary p-4 rounded-4xl px-8">
           <p className="text-lg font-semibold text-white"> Buy it now</p>
         </button>
