@@ -6,6 +6,7 @@ import { ListProducts } from "./components/list-products";
 import { RegistrationProductInfo } from "./components/registration-product-info";
 import { BoxDescription } from "./components/box-description";
 import { mock } from "../../mock";
+import { Breadcrumbs } from "@/app/components/breadcrumbs";
 export default async function Product({
   params,
 }: {
@@ -25,7 +26,7 @@ export default async function Product({
   return (
     <div className="flex flex-col w-[90%] mx-auto">
       <div className="p-3">
-        <p>bread crumbs</p>
+        <Breadcrumbs homeElement={"Home"} separator=" / " capitalizeLinks />
       </div>
       <div className="grid grid-cols-2 p-3 mb-2 gap-3">
         <div className="border border-card rounded-[1.25rem] flex justify-center">
