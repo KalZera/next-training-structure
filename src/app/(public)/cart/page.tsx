@@ -1,3 +1,4 @@
+import { Breadcrumbs } from "@/app/components/breadcrumbs";
 import { mockCart } from "../mock";
 import { ItemList } from "./components/item-list";
 
@@ -10,7 +11,7 @@ export default function Cart() {
   return (
     <div className="flex flex-col w-[90%] mx-auto">
       <div className="p-3">
-        <p>bread crumbs</p>
+        <Breadcrumbs homeElement={"Home"} separator=" / " capitalizeLinks />
       </div>
       <div className="grid grid-cols-[1fr_426px] p-3 mb-2 gap-5">
         <div className="flex flex-col">

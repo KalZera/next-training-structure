@@ -29,7 +29,9 @@ export function Breadcrumbs({
   return (
     <div className="breadcrumbs">
       <ul className="flex gap-3">
-        <li>{homeElement}</li>
+        <Link href="/">
+          <li>{homeElement}</li>
+        </Link>
         {pathNames.length > 0 && separator}
         {pathNames.map((link, index) => {
           const href = `/${pathNames.slice(0, index + 1).join("/")}`;
@@ -40,7 +42,12 @@ export function Breadcrumbs({
           return (
             <>
               <li key={index} className={itemClasses}>
-                <Link href={href}>{itemLink}</Link>
+                {index === pathNames.length - 1 && (
+                  <Link href={href}>{itemLink}</Link>
+                )}
+                {index !== pathNames.length - 1 && (
+                  <Link href={href}>{itemLink}</Link>
+                )}
               </li>
               {pathNames.length !== index + 1 && separator}
             </>
