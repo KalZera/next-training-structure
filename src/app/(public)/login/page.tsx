@@ -16,7 +16,7 @@ export default function Login() {
         <div>
           <p>E-mail</p>
           <input
-            type="text"
+            type="email"
             className="border-2 border-gray-300 rounded-r-default p-2"
             placeholder="Enter your username"
           />
