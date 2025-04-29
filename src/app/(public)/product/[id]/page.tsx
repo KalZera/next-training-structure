@@ -52,7 +52,7 @@ export default async function Product({
       <BoxDescription />
       <div className="p-3">
         <p className="text-2xl text-primary font-semibold">Related Products</p>
-        <div className="grid lg:grid-cols-3 md:grid-cols-3 sm:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 gap-4">
+        <div className="grid lg:grid-cols-3 md:grid-cols-3 sm:grid-cols-3 xl:grid-cols-4 gap-4">
           {productRelated.map((item) => (
             <ProductItem key={item.id} {...item} />
           ))}
