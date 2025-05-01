@@ -6,7 +6,7 @@ export default function Login() {
   return (
     <div className="flex flex-col mx-auto w-[90%] min-h-40">
       <div className="flex flex-col items-center justify-center h-full gap-4">
-        <div className="h-[52px] bg-primary w-[330px] mt-3 flex justify-center items-center">
+        <div className="bg-primary w-[330px] my-3 flex justify-center items-center py-5">
           <Image
             src={Logo}
             alt="Logo"
@@ -27,8 +27,8 @@ export default function Login() {
             placeholder="Enter your password"
           />
         </div>
-        <div>
-          <button className="bg-primary text-white rounded-md p-2 mt-2">
+        <div className="flex w-[330px]">
+          <button className="bg-primary text-white rounded-md p-2 mt-2 w-full">
             Login
           </button>
         </div>
