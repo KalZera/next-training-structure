@@ -1,4 +1,10 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+This is a project for portifolio for (https://github.com/KalZera)
+
+the first idea for this project is using: 
+ - Next Js 
+ - Tailwind Css 
+ - Axios
+ - stripe API
 
 ## Getting Started
 
