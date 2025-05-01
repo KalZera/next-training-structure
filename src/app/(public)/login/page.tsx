@@ -1,5 +1,7 @@
 import Image from "next/image";
 import Logo from "@/public/logo.svg";
+import { Input } from "./components/inputs";
+
 export default function Login() {
   return (
     <div className="flex flex-col mx-auto w-[90%] min-h-40">
@@ -15,17 +17,13 @@ export default function Login() {
         </div>
         <div>
           <p>E-mail</p>
-          <input
-            type="email"
-            className="border-2 border-gray-300 rounded-r-default p-2"
-            placeholder="Enter your username"
-          />
+          <Input type="email" initialValue="" placeholder="Enter your email" />
         </div>
         <div>
           <p>Password</p>
-          <input
+          <Input
             type="password"
-            className="border-2 border-gray-300 rounded-r-default p-2"
+            initialValue=""
             placeholder="Enter your password"
           />
         </div>
