@@ -1,5 +1,5 @@
-import LoginContent from "./components/layout/login-content";
+import { SignIn } from "@clerk/nextjs";
 
 export default function Login() {
-  return <LoginContent />;
+  return <SignIn />;
 }
