@@ -1,11 +1,14 @@
+import { SignOutButton } from "@clerk/nextjs";
+import { auth } from "@clerk/nextjs/server";
 import Link from "next/link";
 
-export function Navbar() {
+export async function Navbar() {
+  const { userId } = await auth();
   return (
     <nav className=" h-[71px] bg-background-nav">
       <div className="w-[90%] mx-auto">
         <div className="relative flex h-16 items-center justify-between">
-          <div className="flex items-center ">
+          <div className="flex items-center justify-between w-full">
             <div className="flex space-x-4">
               <Link
                 href="/"
@@ -24,6 +27,7 @@ export function Navbar() {
                 About Us
               </a> */}
             </div>
+            <div className="flex space-x-4">{userId && <SignOutButton />}</div>
           </div>
         </div>
       </div>
