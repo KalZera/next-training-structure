@@ -27,7 +27,13 @@ export async function Navbar() {
                 About Us
               </a> */}
             </div>
-            <div className="flex space-x-4">{userId && <SignOutButton />}</div>
+            <div className="flex space-x-4">
+              {userId && (
+                <SignOutButton>
+                  <button className="cursor-pointer">Sign Out</button>
+                </SignOutButton>
+              )}
+            </div>
           </div>
         </div>
       </div>
