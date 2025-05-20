@@ -1,3 +1,5 @@
+import { SignOutButton } from "@clerk/nextjs";
+
 export default function AccountContent() {
   return (
     <div className="flex flex-col mx-auto w-[90%] my-6">
@@ -16,6 +18,7 @@ export default function AccountContent() {
         <p>sended</p>
         <p>cupons</p>
       </div>
+      <SignOutButton />
     </div>
   );
 }
