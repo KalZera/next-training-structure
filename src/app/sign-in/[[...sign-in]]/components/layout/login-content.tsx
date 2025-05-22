@@ -1,18 +1,27 @@
+"use client";
 import Image from "next/image";
 import Logo from "@/public/logo.svg";
 import { Input } from "../inputs";
 import { FacebookOutlined, GoogleOutlined } from "@ant-design/icons";
+import { useSignIn } from "@clerk/nextjs";
+import { redirect } from "next/navigation";
 
 export default function LoginContent() {
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const { signIn } = useSignIn();
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     const formData = new FormData(e.currentTarget);
     const email = formData.get("email");
     const password = formData.get("password");
 
-    // Handle login logic here
-    console.log("Email:", email);
-    console.log("Password:", password);
+    const auth = await signIn?.create({
+      identifier: email as string,
+      password: password as string,
+    });
+
+    if (auth?.status === "complete") {
+      redirect("/account");
+    }
   };
 
   return (
