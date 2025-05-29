@@ -3,9 +3,9 @@ import { Metadata } from "next";
 import { ClerkProvider } from "@clerk/nextjs";
 
 import "./globals.css";
-import { Header } from "./components/header";
-import { Navbar } from "./components/navbar";
-import { Footer } from "./components/footer";
+import { Header } from "./components/layout/header";
+import { Navbar } from "./components/layout/navbar";
+import { Footer } from "./components/layout/footer";
 
 export const metadata: Metadata = {
   title: "Next.js",

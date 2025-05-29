@@ -1,7 +1,7 @@
 import Image from "next/image";
 import likeIcon from "@/public/like-icon-product.svg";
-import { Stars } from "../../../components/stars";
-import { Counter } from "../../../components/counter";
+import { Stars } from "../../../components/ui/stars";
+import { Counter } from "../../../components/ui/counter";
 import Link from "next/link";
 interface InfoProductProps {
   id: number | string;

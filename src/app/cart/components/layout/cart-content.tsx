@@ -1,4 +1,4 @@
-import { Breadcrumbs } from "@/app/components/breadcrumbs";
+import { Breadcrumbs } from "@/app/components/layout/breadcrumbs";
 import { mockCart } from "../../../mock";
 import { ItemList } from "../../components/item-list";
 

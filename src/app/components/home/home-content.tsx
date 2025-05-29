@@ -1,4 +1,4 @@
-import { ProductItem } from "../product-item";
+import { ProductItem } from "../ui/product-item";
 import { mock } from "../../mock";
 export default function HomeContent() {
   return (

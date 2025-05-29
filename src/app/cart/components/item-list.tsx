@@ -1,5 +1,5 @@
 import Image, { type StaticImageData } from "next/image";
-import { Counter } from "../../components/counter";
+import { Counter } from "../../components/ui/counter";
 
 import closeIcon from "@/public/close-icon.svg";
 

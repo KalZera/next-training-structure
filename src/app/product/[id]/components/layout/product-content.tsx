@@ -6,7 +6,7 @@ import { ListProducts } from "../../components/list-products";
 import { RegistrationProductInfo } from "../../components/registration-product-info";
 import { BoxDescription } from "../../components/box-description";
 import { mock } from "@/app/(public)/mock";
-import { Breadcrumbs } from "@/app/components/breadcrumbs";
+import { Breadcrumbs } from "@/app/components/layout/breadcrumbs";
 export default async function ProductContent({
   params,
 }: {

@@ -1,4 +1,4 @@
-import { Stars } from "../stars";
+import { Stars } from "../ui/stars";
 interface InfoProductsProps {
   name: string;
   price: number;
