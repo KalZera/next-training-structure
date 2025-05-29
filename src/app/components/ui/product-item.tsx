@@ -1,10 +1,10 @@
 import Image from "next/image";
 
 import { LikeButton } from "./like-button";
-import { GroupProductButtons } from "./products/group-product-buttons";
-import { InfoProducts } from "./products/info-product";
+import { GroupProductButtons } from "../products/group-product-buttons";
+import { InfoProducts } from "../products/info-product";
 import { Product } from "@/app/types/products";
-import { mockLike } from "../mock";
+import { mockLike } from "../../mock";
 
 type ProductItemProps = Product;
 

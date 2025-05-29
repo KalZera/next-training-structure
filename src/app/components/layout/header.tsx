@@ -1,9 +1,9 @@
 import Image from "next/image";
 import Link from "next/link";
-import logo from "../../public/logo.svg";
-import userIcon from "../../public/user-icon.svg";
-import likeIcon from "../../public/like-icon.svg";
-import cartIcon from "../../public/cart-icon.svg";
+import logo from "../../../public/logo.svg";
+import userIcon from "../../../public/user-icon.svg";
+import likeIcon from "../../../public/like-icon.svg";
+import cartIcon from "../../../public/cart-icon.svg";
 import { SearchBox } from "./search-box";
 import { currentUser } from "@clerk/nextjs/server";
 
