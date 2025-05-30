@@ -4,12 +4,12 @@ export interface Product {
   price: number;
   image: StaticImageData;
   description: string;
-  sku: string;
+  sku: string | null;
   categories: string[];
-  availability: string;
-  reviews: number;
+  availability: string | null;
+  reviews: number | null;
   colors: string[];
-  sizes: number[];
+  sizes: string[];
   quantity: number;
   stars: number;
 }
