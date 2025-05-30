@@ -1,5 +1,4 @@
 import { ProductItem } from "../ui/product-item";
-import { mock } from "../../mock";
 import { stripe } from "../../../utils/stripe";
 import type { Stripe } from "stripe";
 
@@ -12,13 +11,13 @@ export default async function HomeContent() {
   const products = data.map((item: Stripe.Product) => ({
     id: item.id,
     name: item.name,
-    price: item.default_price.unit_amount / 100,
+    price: ((item.default_price as Stripe.Price)?.unit_amount ?? 0) / 100,
     image: item.images[0],
-    description: item.description,
-    sku: item.unit_label,
+    description: item.description as string,
+    sku: item.unit_label ?? null,
     categories: [],
-    availability: 1,
-    reviews: 0,
+    availability: null,
+    reviews: null,
     colors: [item.metadata.color],
     sizes: [item.metadata.size],
     quantity: 1,
