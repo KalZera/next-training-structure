@@ -1,11 +1,11 @@
 import Image from "next/image";
 import { redirect } from "next/navigation";
-import { ProductItem } from "@/app/(public)/components/product-item";
+import { ProductItem } from "@/app/components/ui/product-item";
 import { InfoProduct } from "../../components/info-product";
 import { ListProducts } from "../../components/list-products";
 import { RegistrationProductInfo } from "../../components/registration-product-info";
 import { BoxDescription } from "../../components/box-description";
-import { mock } from "@/app/(public)/mock";
+import { mock } from "@/app/mock";
 import { Breadcrumbs } from "@/app/components/layout/breadcrumbs";
 export default async function ProductContent({
   params,
