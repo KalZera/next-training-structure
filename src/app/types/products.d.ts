@@ -9,7 +9,7 @@ export interface Product {
   availability: string | null;
   reviews: number | null;
   colors: string[];
-  sizes: string[];
+  sizes: Array<string | number>;
   quantity: number;
   stars: number;
 }
