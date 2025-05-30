@@ -16,7 +16,7 @@ export function ProductItem(props: ProductItemProps) {
       <div className="group flex flex-col h-full py-5.5 px-3.5 items-center justify-between">
         <div className="flex max-h-[168px] max-w-[282px]">
           <Image
-            src={props.image.src}
+            src={props.image}
             alt=""
             width={282}
             height={168}

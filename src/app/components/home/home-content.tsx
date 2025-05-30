@@ -1,6 +1,30 @@
 import { ProductItem } from "../ui/product-item";
 import { mock } from "../../mock";
-export default function HomeContent() {
+import { stripe } from "../../../utils/stripe";
+import type { Stripe } from "stripe";
+
+export default async function HomeContent() {
+  const { data } = await stripe.products.list({
+    limit: 8,
+    expand: ["data.default_price"],
+  });
+
+  const products = data.map((item: Stripe.Product) => ({
+    id: item.id,
+    name: item.name,
+    price: item.default_price.unit_amount / 100,
+    image: item.images[0],
+    description: item.description,
+    sku: item.unit_label,
+    categories: [],
+    availability: 1,
+    reviews: 0,
+    colors: [item.metadata.color],
+    sizes: [item.metadata.size],
+    quantity: 1,
+    stars: 5,
+  }));
+
   return (
     <div className="flex flex-col mx-auto w-[90%]">
       <div className="p-auto flex justify-between items-center mt-4">
@@ -24,7 +48,7 @@ export default function HomeContent() {
         </div> */}
       </div>
       <div className="grid lg:grid-cols-3 md:grid-cols-3 sm:grid-cols-3 xl:grid-cols-4 gap-6.5">
-        {mock.map((item) => (
+        {products.map((item) => (
           <ProductItem key={item.id} {...item} />
         ))}
       </div>
