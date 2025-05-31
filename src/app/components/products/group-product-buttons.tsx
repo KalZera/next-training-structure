@@ -13,7 +13,7 @@ export function GroupProductButtons({ id }: { id: string | number }) {
         </button>
       </Link>
       <Link href={`/product/${id}`}>
-        <button className="bg-button-cart text-gray-800 rounded-r-default h-[60px] min-w-[60px] p-5">
+        <button className="bg-button-cart text-gray-800 rounded-r-default h-[60px] min-w-[60px] p-5 cursor-pointer">
           <Image src={eyeIcon.src} alt="" width={24} height={24} />
         </button>
       </Link>
