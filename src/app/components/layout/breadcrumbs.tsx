@@ -40,7 +40,7 @@ export function Breadcrumbs({
             ? link[0].toUpperCase() + link.slice(1, link.length)
             : link;
           return (
-            <>
+            <React.Fragment key={index}>
               <li key={index} className={itemClasses}>
                 {index === pathNames.length - 1 && (
                   <Link href={href}>{itemLink}</Link>
@@ -50,7 +50,7 @@ export function Breadcrumbs({
                 )}
               </li>
               {pathNames.length !== index + 1 && separator}
-            </>
+            </React.Fragment>
           );
         })}
       </ul>

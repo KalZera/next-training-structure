@@ -2,7 +2,10 @@ import Image from "next/image";
 import likeIcon from "@/public/like-icon-product.svg";
 import { Stars } from "../../../components/ui/stars";
 import { Counter } from "../../../components/ui/counter";
-import Link from "next/link";
+// import Link from "next/link";
+
+import { addCart } from "@/api/cart";
+
 interface InfoProductProps {
   id: number | string;
   name: string;
@@ -14,7 +17,17 @@ interface InfoProductProps {
 }
 
 export function InfoProduct(props: InfoProductProps) {
-  const { name, price, reviews, quantity, colors, sizes } = props;
+  const { name, price, reviews, quantity, colors, sizes, id } = props;
+
+  const handleAddToCart = async () => {
+    "use server";
+    await addCart(id.toString(), {
+      quantity,
+      size: sizes[0],
+      color: colors[0],
+    });
+  };
+
   return (
     <>
       <p className="text-3xl font-medium text-primary">{name}</p>
@@ -66,11 +79,14 @@ export function InfoProduct(props: InfoProductProps) {
         <Counter />
       </div>
       <div className="flex gap-3">
-        <Link href="/cart">
-          <button className="bg-secondary p-4 rounded-4xl px-8">
-            <p className="text-lg font-semibold text-white"> Add to Cart</p>
-          </button>
-        </Link>
+        {/* <Link href="/cart"> */}
+        <button
+          className="bg-secondary p-4 rounded-4xl px-8"
+          onClick={handleAddToCart}
+        >
+          <p className="text-lg font-semibold text-white"> Add to Cart</p>
+        </button>
+        {/* </Link> */}
         <button className="bg-secondary p-4 rounded-4xl px-8">
           <p className="text-lg font-semibold text-white"> Buy it now</p>
         </button>
