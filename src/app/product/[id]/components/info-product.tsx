@@ -7,10 +7,10 @@ interface InfoProductProps {
   id: number | string;
   name: string;
   price: number;
-  reviews: number;
+  reviews: number | null;
   quantity: number;
   colors: string[];
-  sizes: number[];
+  sizes: string[];
 }
 
 export function InfoProduct(props: InfoProductProps) {
@@ -26,7 +26,9 @@ export function InfoProduct(props: InfoProductProps) {
       </p>
       <div className="flex">
         <Stars />
-        <p className="text-sm font-normal text-gray-1 p-3">{reviews} reviews</p>
+        <p className="text-sm font-normal text-gray-1 p-3">
+          {reviews ?? "No "} reviews
+        </p>
       </div>
       {quantity > 0 && (
         <div className="flex">

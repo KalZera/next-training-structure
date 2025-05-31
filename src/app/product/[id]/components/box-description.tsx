@@ -1,7 +1,12 @@
 "use client";
 import { BoxReviews } from "./box-reviews";
 import { useState } from "react";
-export function BoxDescription() {
+
+interface BoxDescriptionProps {
+  description: string;
+}
+
+export function BoxDescription({ description }: BoxDescriptionProps) {
   const [action, setAction] = useState<"description" | "review">("description");
   const active = "border-primary bg-primary text-white";
   const inactive = "border-gray-5 text-gray-6";
@@ -25,7 +30,13 @@ export function BoxDescription() {
           <p className="text-xl font-medium">Reviews</p>
         </button>
       </div>
-      <BoxReviews />
+      {action === "description" && (
+        <div className="p-12 border-1 border-card rounded-r-default">
+          <p className="text-xl text-primary font-semibold">Description</p>
+          <p className="text-lg text-gray-1 py-4">{description}</p>
+        </div>
+      )}
+      {action === "review" && <BoxReviews />}
     </div>
   );
 }
