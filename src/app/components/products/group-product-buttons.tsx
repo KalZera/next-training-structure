@@ -8,7 +8,7 @@ export function GroupProductButtons({ id }: { id: string | number }) {
     <>
       <Link href="/cart" className="flex flex-1">
         <button className="bg-button-cart flex flex-1 justify-between items-center text-gray-800 rounded-[1.25rem] h-[60px] p-5">
-          <p className="font-semibold"> Add to cart </p>
+          <p className="font-semibold"> Buy now </p>
           <Image src={cartIcon.src} alt="" width={32} height={32} />
         </button>
       </Link>
