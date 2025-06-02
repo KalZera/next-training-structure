@@ -2,7 +2,7 @@ import { Breadcrumbs } from "@/app/components/layout/breadcrumbs";
 import { mockCart } from "../../../mock";
 import { ItemList } from "../../components/item-list";
 
-export default function CartContent() {
+export default async function CartContent() {
   const cartItems = mockCart;
   const totalPrice = cartItems.reduce(
     (acc, item) => acc + item.price * item.quantity,

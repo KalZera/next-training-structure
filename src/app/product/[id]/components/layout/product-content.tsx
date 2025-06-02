@@ -2,8 +2,8 @@ import Image from "next/image";
 import { redirect } from "next/navigation";
 // import { Productproduct } from "@/app/components/ui/product-product";
 import { InfoProduct } from "../../components/info-product";
-import { ListProducts } from "../../components/list-products";
-import { RegistrationProductInfo } from "../../components/registration-product-info";
+// import { ListProducts } from "../../components/list-products";
+// import { RegistrationProductInfo } from "../../components/registration-product-info";
 import { BoxDescription } from "../../components/box-description";
 import { Breadcrumbs } from "@/app/components/layout/breadcrumbs";
 
@@ -53,14 +53,14 @@ export default async function ProductContent({
             alt=""
           />
         </div>
-        <div className="flex flex-col gap-4 justify-around">
+        <div className="flex flex-col gap-4">
           <InfoProduct {...productParsed} />
         </div>
       </div>
-      <div className="grid grid-cols-2 p-3 mb-2 gap-3">
+      {/* <div className="grid grid-cols-2 p-3 mb-2 gap-3">
         <ListProducts />
         <RegistrationProductInfo sku={productParsed.sku} />
-      </div>
+      </div> */}
       <BoxDescription description={productParsed.description} />
       {/* <div className="p-3">
         <p className="text-2xl text-primary font-semibold">Related Products</p>
