@@ -1,10 +1,11 @@
 import Image from "next/image";
+// import { redirect } from "next/navigation";
 import likeIcon from "@/public/like-icon-product.svg";
 import { Stars } from "../../../components/ui/stars";
 import { Counter } from "../../../components/ui/counter";
 // import Link from "next/link";
 
-import { addCart } from "@/api/cart";
+// import { addCart } from "@/api/cart";
 
 interface InfoProductProps {
   id: number | string;
@@ -17,16 +18,18 @@ interface InfoProductProps {
 }
 
 export function InfoProduct(props: InfoProductProps) {
-  const { name, price, reviews, quantity, colors, sizes, id } = props;
+  const { name, price, reviews, colors } = props;
 
-  const handleAddToCart = async () => {
-    "use server";
-    await addCart(id.toString(), {
-      quantity,
-      size: sizes[0],
-      color: colors[0],
-    });
-  };
+  // const handleAddToCart = async () => {
+  //   "use server";
+  //   await addCart(id.toString(), {
+  //     quantity,
+  //     size: sizes[0],
+  //     color: colors[0],
+  //   });
+
+  //   redirect("/cart");
+  // };
 
   return (
     <>
@@ -43,7 +46,7 @@ export function InfoProduct(props: InfoProductProps) {
           {reviews ?? "No "} reviews
         </p>
       </div>
-      {quantity > 0 && (
+      {/* {quantity > 0 && (
         <div className="flex">
           <p className="text-lg font-medium text-gray-800 pr-2">Avaibility</p>
           <p className="text-lg font-medium text-gray-800"> In Stock</p>
@@ -53,41 +56,41 @@ export function InfoProduct(props: InfoProductProps) {
         <p className="text-sm font-normal text-gray-800">
           Hurry up! Only {quantity} product left in stock!{" "}
         </p>
-      )}
-      <div className="flex gap-3">
+      )} */}
+      <div className="flex gap-3 items-center">
         <p className="text-lg font-medium"> Colors: </p>
-        {colors.map((color) => (
+        {/* {colors.map((color) => (
           <button
             className={`rounded-full p-3 w-2.5 h-2.5 bg-[${color}]`}
             key={color}
           >
             <span className="w-2.5" />
           </button>
-        ))}
+        ))} */}
+        {colors[0]}
       </div>
-      <div className="flex gap-3">
+      {/* <div className="flex gap-3">
         <p className="text-lg font-medium"> Size: </p>
-        {/* <input type="checkbox" className="hidden" name="size"/> */}
+        <input type="checkbox" className="hidden" name="size"/>
         {sizes.map((size) => (
           <button key={size} className="px-3 bg-gray-2 border-gray-3 border-1">
             <p className="text-lg px-2 text-gray-3">{size}</p>
           </button>
         ))}
-      </div>
+      </div> */}
       <div className="flex pt-3">
         <p className="text-lg font-medium pr-3"> Quantity: </p>
-        <Counter />
+        <Counter initialValue={1} />
       </div>
-      <div className="flex gap-3">
-        {/* <Link href="/cart"> */}
-        <button
-          className="bg-secondary p-4 rounded-4xl px-8"
+      <div className="flex flex-1" />
+      <div className="flex gap-3 ">
+        {/* <button
+          className="bg-secondary p-4 rounded-4xl px-8 cursor-pointer"
           onClick={handleAddToCart}
         >
           <p className="text-lg font-semibold text-white"> Add to Cart</p>
-        </button>
-        {/* </Link> */}
-        <button className="bg-secondary p-4 rounded-4xl px-8">
+        </button> */}
+        <button className="bg-secondary p-4 rounded-4xl px-8 cursor-pointer">
           <p className="text-lg font-semibold text-white"> Buy it now</p>
         </button>
         <button className="bg-red-200 min-h-16 min-w-16 flex items-center justify-center rounded-full">
