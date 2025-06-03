@@ -1,4 +1,10 @@
-import db from "../db/db.json";
+
+import fs from 'fs';
+
+const data = fs.readFileSync('../db/db.json', 'utf-8');
+const db = JSON.parse(data);
+
+console.log(db);
 
 type CartDetails = {
   quantity: number;
@@ -6,8 +12,14 @@ type CartDetails = {
   color: string;
   [key: string]: unknown; // Allow additional properties
 };
+
+type CartItem = {
+  productId: string;
+  details: CartDetails;
+};
+
 export const addCart = async (productId: string, details: CartDetails) => {
-  const cart: { productId: string; details: CartDetails }[] = db.cart || [];
+  const cart: CartItem[] = db.cart  || [];
   const existingItemIndex = cart.findIndex(
     (item) => item.productId === productId
   );
@@ -26,7 +38,7 @@ export const getCart = async () => {
   return cart;
 };
 export const removeCart = async (productId: string) => {
-  const cart = db.cart || [];
+  const cart:CartItem[] = db.cart || [];
   const index = cart.findIndex((item) => item.productId === productId);
   if (index !== -1) {
     cart.splice(index, 1);
