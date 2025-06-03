@@ -3,10 +3,8 @@ import Image from "next/image";
 import likeIcon from "@/public/like-icon-product.svg";
 import { Stars } from "../../../components/ui/stars";
 import { Counter } from "../../../components/ui/counter";
+import { ButtonBuy } from "./button-buy";
 // import Link from "next/link";
-
-// import { addCart } from "@/api/cart";
-
 interface InfoProductProps {
   id: number | string;
   name: string;
@@ -15,21 +13,11 @@ interface InfoProductProps {
   quantity: number;
   colors: string[];
   sizes: string[];
+  defaultPriceId: string;
 }
 
 export function InfoProduct(props: InfoProductProps) {
   const { name, price, reviews, colors } = props;
-
-  // const handleAddToCart = async () => {
-  //   "use server";
-  //   await addCart(id.toString(), {
-  //     quantity,
-  //     size: sizes[0],
-  //     color: colors[0],
-  //   });
-
-  //   redirect("/cart");
-  // };
 
   return (
     <>
@@ -90,9 +78,13 @@ export function InfoProduct(props: InfoProductProps) {
         >
           <p className="text-lg font-semibold text-white"> Add to Cart</p>
         </button> */}
-        <button className="bg-secondary p-4 rounded-4xl px-8 cursor-pointer">
+        {/* <button
+          className="bg-secondary p-4 rounded-4xl px-8 cursor-pointer"
+          onClick={handleClick}
+        >
           <p className="text-lg font-semibold text-white"> Buy it now</p>
-        </button>
+        </button> */}
+        <ButtonBuy defaultPriceId={props.defaultPriceId} />
         <button className="bg-red-200 min-h-16 min-w-16 flex items-center justify-center rounded-full">
           <Image src={likeIcon.src} width={36} height={36} alt="" />
         </button>

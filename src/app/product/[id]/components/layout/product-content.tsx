@@ -37,6 +37,7 @@ export default async function ProductContent({
     sizes: [product.metadata.size],
     quantity: 1,
     stars: 5,
+    defaultPriceId: (product.default_price as Stripe.Price).id,
   };
   return (
     <div className="flex flex-col w-[90%] mx-auto">
