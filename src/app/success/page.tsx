@@ -20,7 +20,7 @@ export default function Success() {
           completed within 3-6 hours. You will receive an email confirmation
           when your order is completed.
         </p>
-        <Link href="/">
+        <Link href="/home">
           <button
             className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 m-4 cursor-pointer"
             type="button"

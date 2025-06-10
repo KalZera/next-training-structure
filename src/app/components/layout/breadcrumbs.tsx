@@ -29,7 +29,7 @@ export function Breadcrumbs({
   return (
     <div className="breadcrumbs">
       <ul className="flex gap-3">
-        <Link href="/">
+        <Link href="/home">
           <li>{homeElement}</li>
         </Link>
         {pathNames.length > 0 && separator}
