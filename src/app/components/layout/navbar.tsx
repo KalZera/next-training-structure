@@ -11,7 +11,7 @@ export async function Navbar() {
           <div className="flex items-center justify-between w-full">
             <div className="flex space-x-4">
               <Link
-                href="/"
+                href="/home"
                 className="rounded-md px-3 py-2 text-md text-first"
               >
                 Home

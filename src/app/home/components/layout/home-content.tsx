@@ -1,5 +1,5 @@
-import { ProductItem } from "../ui/product-item";
-import { stripe } from "../../../utils/stripe";
+import { ProductItem } from "@/app/components/ui/product-item";
+import { stripe } from "@/utils/stripe";
 import type { Stripe } from "stripe";
 
 export default async function HomeContent() {
