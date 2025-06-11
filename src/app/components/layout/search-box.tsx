@@ -4,7 +4,7 @@ import { usePathname } from "next/navigation";
 export function SearchBox() {
   const pathname = usePathname();
 
-  if (pathname === "/login") return;
+  if (pathname === "/sign-in") return;
   return (
     <div className="flex items-center">
       <input

@@ -27,7 +27,7 @@ export async function Header() {
             <Image src={logo.src} alt="Logo" width={140} height={39} />
             <SearchBox />
             <div className="flex items-center gap-3">
-              <Link href={user ? "/account" : "/login"}>
+              <Link href={user ? "/account" : "/sign-in"}>
                 <button className="flex gap-2 text-white px-4 py-2 rounded h-full cursor-pointer justify-center items-center">
                   <Image src={userIcon.src} alt="Logo" width={24} height={24} />
                   <p className="text-sm font-normal capitalize">
