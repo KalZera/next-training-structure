@@ -9,7 +9,7 @@ export default function Initial() {
         Welcome
       </h1>
       <div className="grid grid-cols-2 gap-6">
-        <p className="text-second text-lg font-normal my-4">
+        <div className="text-second text-lg font-normal my-4">
           <p className="text-center">Hello, This is a part of my portfolio</p>
           <br /> i am <strong>Alexander Karuzo</strong>, i like to code and work
           with that since 2017, i have worked with many technologies like{" "}
@@ -44,7 +44,7 @@ export default function Initial() {
           <br />
           This project is not finished yet, i will be adding more features and
           improving the design in the future, so stay tuned for updates!
-        </p>
+        </div>
         <span className="flex justify-center items-center max-w-[300px] mx-auto ">
           <Image
             src={Avatar.src}
