@@ -4,27 +4,31 @@
 
 interface InfoProductProps {
   defaultPriceId: string;
+  // product: Record<string, string | number | null>;
 }
 
 export function ButtonBuy(props: InfoProductProps) {
   const handleClick = async () => {
     try {
-      // console.log("Buy it now clicked", { priceId: props.defaultPriceId });
       const fetchResponse = await fetch("/api/checkout", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
-          priceId: props.defaultPriceId,
+          products: [
+            {
+              productId: "prod_SOivOaXdda4t6N",
+              default_price_id: "price_1RTvTlRlX9IWN9B1omyWeXRd",
+              quantity: 1,
+            },
+          ],
         }),
       });
-      console.log("Fetch response:", fetchResponse);
+
       if (!fetchResponse.ok) {
         throw new Error("Failed to create checkout session");
       }
-
-      console.log({ fetchResponse });
     } catch (error) {
       console.error("Error during checkout:", error);
       // redirect("/404");
