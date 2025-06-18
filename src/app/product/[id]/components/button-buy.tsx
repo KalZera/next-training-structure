@@ -1,6 +1,6 @@
 "use client";
 
-// import { redirect } from "next/navigation";
+import { redirect } from "next/navigation";
 
 interface InfoProductProps {
   defaultPriceId: string;
@@ -29,9 +29,12 @@ export function ButtonBuy(props: InfoProductProps) {
       if (!fetchResponse.ok) {
         throw new Error("Failed to create checkout session");
       }
+      const data = await fetchResponse.json();
+
+      window.location.href = data.url;
     } catch (error) {
       console.error("Error during checkout:", error);
-      // redirect("/404");
+      redirect("/404");
     }
   };
 
