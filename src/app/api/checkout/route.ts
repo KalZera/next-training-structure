@@ -1,9 +1,9 @@
 import { stripe } from "@/utils/stripe";
-import {NextResponse, NextRequest} from 'next/server'
+import { NextResponse, NextRequest } from "next/server";
 
 export async function POST(request: NextRequest) {
-  console.log("Request body:", { request });
-  // const priceId = request.body.priceId;
+  const req = await request.json();
+  const priceId = req.products.default_price_id;
   const successUrl = `${process.env.NEXT_URL}/success`;
   const cancelUrl = `${process.env.NEXT_URL}/`;
 
@@ -11,14 +11,13 @@ export async function POST(request: NextRequest) {
     mode: "payment",
     line_items: [
       {
-        price: 'price_1RTvTlRlX9IWN9B1omyWeXRd',
+        price: priceId,
         quantity: 1,
       },
     ],
-    success_url:successUrl,
-    cancel_url: cancelUrl
+    success_url: successUrl,
+    cancel_url: cancelUrl,
   });
 
-  return NextResponse.json({url:checkoutSession.url}, {status: 200});
-
+  return NextResponse.json({ url: checkoutSession.url }, { status: 200 });
 }
