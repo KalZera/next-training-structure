@@ -16,13 +16,11 @@ export function ButtonBuy(props: InfoProductProps) {
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
-          products: [
-            {
-              productId: props.product.productId,
-              default_price_id: props.product.default_price_id,
-              quantity: 1,
-            },
-          ],
+          products: {
+            productId: props.product.productId,
+            default_price_id: props.product.default_price_id,
+            quantity: 1,
+          },
         }),
       });
 
