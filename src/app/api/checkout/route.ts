@@ -5,7 +5,7 @@ export async function POST(request: NextRequest) {
   const req = await request.json();
   const priceId = req.products.default_price_id;
   const successUrl = `${process.env.NEXT_URL}/success`;
-  const cancelUrl = `${process.env.NEXT_URL}/`;
+  const cancelUrl = `${process.env.NEXT_URL}/home`;
 
   const checkoutSession = await stripe.checkout.sessions.create({
     mode: "payment",
