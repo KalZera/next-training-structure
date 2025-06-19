@@ -4,7 +4,7 @@ import { redirect } from "next/navigation";
 
 interface InfoProductProps {
   defaultPriceId: string;
-  // product: Record<string, string | number | null>;
+  product: Record<string, string | number | null>;
 }
 
 export function ButtonBuy(props: InfoProductProps) {
@@ -18,8 +18,8 @@ export function ButtonBuy(props: InfoProductProps) {
         body: JSON.stringify({
           products: [
             {
-              productId: "prod_SOivOaXdda4t6N",
-              default_price_id: "price_1RTvTlRlX9IWN9B1omyWeXRd",
+              productId: props.product.productId,
+              default_price_id: props.product.default_price_id,
               quantity: 1,
             },
           ],

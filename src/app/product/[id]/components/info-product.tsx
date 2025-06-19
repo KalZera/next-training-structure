@@ -17,7 +17,7 @@ interface InfoProductProps {
 }
 
 export function InfoProduct(props: InfoProductProps) {
-  const { name, price, reviews, colors } = props;
+  const { name, price, reviews, colors, id, defaultPriceId } = props;
 
   return (
     <>
@@ -84,7 +84,14 @@ export function InfoProduct(props: InfoProductProps) {
         >
           <p className="text-lg font-semibold text-white"> Buy it now</p>
         </button> */}
-        <ButtonBuy defaultPriceId={props.defaultPriceId} />
+        <ButtonBuy
+          defaultPriceId={props.defaultPriceId}
+          product={{
+            productId: id,
+            default_price_id: defaultPriceId,
+            quantity: 1,
+          }}
+        />
         <button className="bg-red-200 min-h-16 min-w-16 flex items-center justify-center rounded-full">
           <Image src={likeIcon.src} width={36} height={36} alt="" />
         </button>
