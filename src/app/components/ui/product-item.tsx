@@ -33,7 +33,7 @@ export function ProductItem(props: ProductItemProps) {
           />
         </div>
         <div className="flex w-full justify-between px-2 gap-3  transition-all duration-300 ease-in-out opacity-0 translate-y-[0px] group-hover:flex group-hover:opacity-100 group-hover:translate-y-[-60px]">
-          <GroupProductButtons id={props.id} />
+          <GroupProductButtons product={props} />
         </div>
       </div>
     </div>
