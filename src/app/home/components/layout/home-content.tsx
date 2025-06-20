@@ -22,6 +22,7 @@ export default async function HomeContent() {
     sizes: [item.metadata.size],
     quantity: 1,
     stars: 5,
+    default_price_id: (item.default_price as Stripe.Price)?.id,
   }));
 
   return (
