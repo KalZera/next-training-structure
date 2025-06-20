@@ -12,4 +12,5 @@ export interface Product {
   sizes: Array<string | number>;
   quantity: number;
   stars: number;
+  default_price_id?: string;
 }
